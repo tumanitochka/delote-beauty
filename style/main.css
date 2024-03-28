@@ -39,10 +39,37 @@ nav {
 nav a {
     text-decoration: none;
     color: #FFFFFF;
+    border-bottom: solid 1px #cdaa7d00;
+}
+
+nav label {
+    cursor: pointer;
+    color: white;
+}
+
+nav label:hover {
+    color: #CDAA7D;
+}
+
+nav a:hover {
+    color: #CDAA7D;
+    border-bottom: solid 1px #CDAA7D;
 }
 
 .logo {
     margin: 0 40px;
+}
+
+.instagram, .logo {
+    border: none !important;
+}
+
+.inst:hover path {
+    stroke: #CDAA7D;
+}
+
+.logo:hover path {
+    fill: #CDAA7D;
 }
 
 #menu, .nav_contact {
@@ -50,15 +77,18 @@ nav a {
 }
 
 #menu:checked ~ .nav_contact {
-    display: flex;
+    transform: translate(0, 0);
 }
 
 .nav_contact {
+    transform: translate(475px, 0);
+    transition: all .1s linear;
+    display: flex;
     flex-direction: column;
     color: #FFFFFF;
     height: 100vh;
     width: 475px;
-    background-color: #111111;
+    background-color: #111111dd;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -75,6 +105,12 @@ nav a {
     position: absolute;
     top: 42px;
     left: 82px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.nav_contact label:hover {
+    color: #CDAA7D;
 }
 
 .nav_contact ul {
